@@ -1,0 +1,10 @@
+<div class="gridlocals">
+      <a class= "cat" *ngFor="let categoria of categorias" routerLink="/locales">
+      <div class="imgcontent">
+          <img src="../../assets/img/categorias/{{categoria.img}}"/>
+      </div>
+      <div>
+         <label>{{categoria.tipo}}</label>
+      </div>
+      </a>
+</div>
