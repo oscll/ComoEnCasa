@@ -12,6 +12,7 @@ import { HomeModule } from './home/home.module';
 import { ProfileModule } from './profile/profile.module';
 import { SettingsModule } from './settings/settings.module';
 import { LocalesModule} from './locales/locales.module';
+import { ContactModule } from './contact/contact.module';
 import {
   ApiService,
   ArticlesService,
@@ -25,7 +26,8 @@ import {
   ProfilesService,
   SharedModule,
   TagsService,
-  UserService
+  UserService,
+  ContactService
 } from './shared';
 // import { LocalesComponent } from './locales/locales.component';
 /* import { CategoriasComponent } from './categorias/categorias.component'; */
@@ -52,7 +54,8 @@ const rootRouting: ModuleWithProviders = RouterModule.forRoot([], { useHash: tru
     SharedModule,
     SettingsModule,
     HttpModule,
-    LocalesModule
+    LocalesModule,
+    ContactModule
   ],
   providers: [
     ApiService,

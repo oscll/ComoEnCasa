@@ -11,6 +11,8 @@ https://docs.djangoproject.com/en/1.10/ref/settings/
 """
 
 import os
+from dotenv import load_dotenv, find_dotenv
+load_dotenv(find_dotenv())
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -47,7 +49,8 @@ INSTALLED_APPS = [
     'conduit.apps.core',
     'conduit.apps.profiles',
     'conduit.apps.categorias',
-    'conduit.apps.locales'
+    'conduit.apps.locales',
+    'conduit.apps.contact'
 ]
 
 MIDDLEWARE = [
@@ -155,3 +158,6 @@ REST_FRAMEWORK = {
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
     'PAGE_SIZE': 20,
 }
+
+EMAIL_BACKEND = 'sgbackend.SendGridBackend'
+SENDGRID_API_KEY = os.environ.get('SECRET_KEY_SENDGRID') 

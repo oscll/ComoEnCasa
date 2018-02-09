@@ -136,3 +136,11 @@ ENV/
 
 # SQLite3
 db.sqlite3
+
+#venv
+share/
+lib64
+bin/
+pyvenv.cfg 
+#dotenv
+.env

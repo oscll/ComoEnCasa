@@ -33,4 +33,6 @@ urlpatterns = [
     url(r'^api/', include('conduit.apps.profiles.urls', namespace='profiles')),
     url(r'^api/', include('conduit.apps.categorias.urls', namespace='categorias')),
     url(r'^api/', include('conduit.apps.locales.urls', namespace='locales')),
+    url(r'^api/', include('conduit.apps.contact.urls', namespace='contact')),
+
 ]

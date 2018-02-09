@@ -8,3 +8,4 @@ export * from './tags.service';
 export * from './user.service';
 export * from './categorias.service';
 export * from './locales.service';
+export * from './contact.service';
