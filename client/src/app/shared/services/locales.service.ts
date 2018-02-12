@@ -63,6 +63,7 @@ import { Observable } from 'rxjs/Rx';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 
+import { Locales } from '../models';
 import { ApiService } from './api.service';
 
 @Injectable()
@@ -76,4 +77,9 @@ export class LocalesService {
            .map(data => data.results);
   }
 
+  getOne(id:string): Observable<[string]>{
+    return this.apiService.get('/locdetail/'+id+'/')
+            .map(data => data);
+
+  }  
 }
