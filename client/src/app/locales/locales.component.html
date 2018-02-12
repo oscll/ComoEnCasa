@@ -6,10 +6,9 @@
                         <agm-map [latitude]=38.821655 [longitude]=-0.605836></agm-map>
                     </div>
                     <div class="gridlist_cards">
-                            <a class= "cards_list" *ngFor="let local of locales" href="http://localhost:8080/api/locdetail/{{local.id_local}}">
-                            <!-- <a class= "cards_list" *ngFor="let local of locales"  routerLinkActive="active"
+                            <a class= "cards_list" *ngFor="let local of locales"  routerLinkActive="active"
                             [routerLinkActiveOptions]="{ exact: true }"
-                            [routerLink]="['/locales']"> -->
+                            [routerLink]="['/locales',local.id_local]">
                                 
                                 <div class="list_imgcontent">
                                     <img src="../../assets/img/locales/{{local.foto}}"/>

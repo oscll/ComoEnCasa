@@ -1,38 +1,35 @@
 import { ModuleWithProviders, NgModule } from '@angular/core';
-/* import { CommonModule } from '@angular/common'; */
 import { RouterModule } from '@angular/router';
 import { AgmCoreModule } from '@agm/core';
 
-import { HomeComponent } from '../home/home.component';
+import { LocalesComponent } from './locales.component';
+import { LocalDetailsComponent } from './localdetails.component';
 import { SharedModule } from '../shared';
-/* import { LocalesAuthResolver } from '../locales/locales-auth-resolver.service'; */
-import { LocalesComponent} from '../locales/locales.component';
 
 
 const localRouting: ModuleWithProviders = RouterModule.forChild([
   {
     path: 'locales',
     component: LocalesComponent,
-   /*  resolve: {
-      isAuthenticated: LocalesAuthResolver
-    } */
+  },
+  {
+    path: 'locales/:id',
+    component: LocalDetailsComponent
   }
 ]);
 
 @NgModule({
   imports: [
-   /*  CommonModule, */
    localRouting,
     SharedModule,
     AgmCoreModule.forRoot({
-      apiKey: 'APIKEY GMAPS'
+      apiKey: 'API GMAPS'
     })
   ],
   declarations: [
-    LocalesComponent
+    LocalesComponent,
+    LocalDetailsComponent
   ],
-  providers: [
-  /*   LocalesAuthResolver */
-  ]
+  providers: []
 })
 export class LocalesModule { }
