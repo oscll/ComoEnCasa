@@ -1,5 +1,7 @@
 <div class="gridlocals">
-      <a class= "cat" *ngFor="let categoria of categorias" routerLink="/locales">
+      <a class= "cat" *ngFor="let categoria of categorias" routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: true }"
+      [routerLink]="['/',categoria.tipo]"> 
       <div class="imgcontent">
           <img src="../../assets/img/categorias/{{categoria.img}}"/>
       </div>

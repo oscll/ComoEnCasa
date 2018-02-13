@@ -34,6 +34,7 @@ import {
 
 const rootRouting: ModuleWithProviders = RouterModule.forRoot([], { useHash: true });
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -72,3 +73,4 @@ const rootRouting: ModuleWithProviders = RouterModule.forRoot([], { useHash: tru
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+

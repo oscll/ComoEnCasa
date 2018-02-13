@@ -41,6 +41,8 @@ testem.log
 .DS_Store
 Thumbs.db
 
+# Development keys
+client/src/environments/dotenv.ts
 
 
 

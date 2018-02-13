@@ -82,4 +82,9 @@ export class LocalesService {
             .map(data => data);
 
   }  
+
+  getbyCategory(categoria:string): Observable<[string]> {
+    return this.apiService.get('/loccat/'+categoria+'/')
+           .map(data => data.results);
+  }
 }

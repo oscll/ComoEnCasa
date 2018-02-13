@@ -1,11 +1,36 @@
-<ul>
-   <li>{{local.id_local}}</li>
-   <li>{{local.nombre}}</li>
-   <li>{{local.telefono}}</li>
-   <li>{{local.direccion}}</li>
-   <li>{{local.poblacion}}</li>
-   <li>{{local.provincia}}</li>
-   <li>{{local.latitud}}</li>
-   <li>{{local.longitud}}</li>
-   <li>{{local.categoria}}</li>
-</ul>
+<section class="home-page">
+    <div class="container page">
+        <div class="row">
+            <div>
+                <a routerLink="/{{local.categoria}}"
+                routerLinkActive="active">Volver</a>
+            </div>
+            <section class="gridlist">
+                <div class="gridlist_Map">
+                    <agm-map [latitude]=38.821655 [longitude]=-0.605836>
+                       
+                    </agm-map>
+                </div>
+                <div class="gridlist_cards">
+                        <div class= "cards_list">
+                            <div class="list_imgcontent">
+                                <img src="../../assets/img/locales/{{local.foto}}"/>
+                            </div>
+                            <div class="list_content">
+                                <div>
+                                    <h4>{{local.nombre}}</h4>
+                                    <span>Teléfono:<label></label> {{local.telefono}}</span><br>
+                                    <span><label>Dirección:</label> {{local.direccion}}</span><br>
+                                    <span><label>Población:</label> {{local.poblacion}}</span><br>
+                                    <span><label>Provincia:</label> {{local.provincia}}</span><br>
+                                    <span><label>Categ:</label> {{local.categoria}}</span><br>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+                <div class="list_paginator" >
+                </div>
+            </section>
+        </div>
+    </div>
+</section>

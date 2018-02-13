@@ -4,7 +4,8 @@ import { LocalesService } from '../shared';
 
 @Component({
   selector: 'local-details',
-  templateUrl: './localdetails.component.html'
+  templateUrl: './localdetails.component.html',
+  styleUrls: ['./locales.component.css']
 })
 export class LocalDetailsComponent implements OnInit {
   constructor(
